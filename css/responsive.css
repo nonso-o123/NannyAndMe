@@ -1,0 +1,115 @@
+/*tablet*/
+@media (max-width: 900px) {
+
+    div.container {
+        width: 100%;
+    }
+
+    h1.logo {
+        font-size: 2.3em;
+        height: 50px;
+    }
+
+    button {
+        margin-right: 25px;
+    }
+
+    nav ul {
+        padding-top: 5px;
+    }
+
+    nav li {
+        margin-right: 0;
+    }
+
+    h2.subhead {
+        font-size: 1.4em;
+    }
+
+    h2.subtitle {
+        font-size: 1.8em;
+    }
+
+    h3.subhead {
+        font-size: 1.4em;
+    }
+
+    h4.stat {
+        font-size: 1.5em;
+    }
+
+    div.stats-block p {
+        padding-right: 20px;
+    }
+
+}
+
+
+/*mobile*/
+@media (max-width: 450px) {
+
+    div.container {
+        width: 100%;
+    }
+
+    h1.logo {
+        grid-column: 1 / span 2;
+        font-size: 1.2em;
+        height: 30px;
+        letter-spacing: 0;
+        float: left;
+        text-align: left;
+    }
+
+    button#login {
+        margin: 0;
+        margin-top: 10%;
+        height: 2em;
+        padding: 0;
+    }
+
+    nav ul {
+        padding-top: 5px;
+        align-items: center;
+        align-content: center;
+        float: none;
+        display: block;
+    }
+
+    nav li {
+        margin-right: 0;
+    }
+
+    h2.subhead {
+        font-size: 1.2em;
+    }
+
+    h2.subtitle {
+        font-size: 1.2em;
+        margin: 0 auto;
+    }
+
+    p.mission,
+    p.mission-author {
+        font-size: .7em;
+        margin: 0;
+        width: 100%;
+    }
+
+    p.mission-author {
+        grid-column: 2 / span 2;
+        text-align: center;
+    }
+
+    h3.subhead {
+        font-size: 1.1em;
+    }
+
+    h4.stat {
+        font-size: 1.2em;
+    }
+
+    div.stats-block p {
+        font-size: .6em;
+        padding-right: 5px;
+    }

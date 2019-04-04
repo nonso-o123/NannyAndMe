@@ -1,0 +1,151 @@
+/*set up main grid*/
+div.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, max-content);
+    grid-row-gap: 10px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0 auto;
+}
+
+div.header {
+    /* position in main grid */
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    /* set up inner grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, max-content);
+}
+
+h1.logo {
+
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#login {
+    grid-column: 4;
+    grid-row: 1;
+    margin-left: 50%;
+    margin-top: 10%;
+    width: 100px;
+    height: 3em;
+}
+
+nav {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    margin: 0 auto;
+    width: 90%;
+}
+
+nav ul {
+    padding-top: 1em;
+    display: inline-block;
+}
+
+nav li {
+    float: left;
+    margin-right: 3em;
+    list-style-type: none;
+    padding-right: 40px;
+}
+
+.subhead {
+    padding: 1.5em;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h2.subhead {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+}
+
+img.mother {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.subtitle {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+    margin: 10px auto;
+}
+
+p.mission {
+    grid-column: 1 / span 4;
+    grid-row: 5;
+    width: 70%;
+    margin: 0 auto;
+}
+
+p.mission-author {
+    grid-column: 4;
+    grid-row: 6;
+}
+
+div.stats-block {
+    grid-column: 1 / span 4;
+    grid-row: 7;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    grid-row-gap: 20px;
+    padding: 10px 10px 10px 10px;
+    width: 99%;
+}
+
+h3.subhead {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin-bottom: 25px;
+    float: left;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+div#.block1 {
+    grid-column: 1;
+    grid-row: 2;
+    width: 50%;
+}
+
+div.block2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+div.block3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+div.block4 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+h4.stat {
+    margin: 0px;
+}
+
+div.stats-block p {
+    margin-top: 0;
+}

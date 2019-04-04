@@ -1,0 +1,45 @@
+:root {
+
+    --bg-color: white;
+    --text-color: black;
+    /* yellow */
+    --accent-color: #fcde1c;
+    --accent-color-2: dimgray;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+div.header {
+    background-color: var(--accent-color);
+}
+
+#login {
+    background-color: var(--accent-color-2);
+    color: var(--accent-color);
+    border-radius: 50px;
+    border-color: var(--bg-color);
+}
+
+nav a {
+    color: var(--text-color);
+}
+
+nav a:hover {
+    color: var(--accent-color-2);
+}
+
+h2.subtitle {
+    border-bottom: 1.5px solid var(--text-color);
+}
+
+div.stats-block {
+    background-color: var(--accent-color-2);
+    color: var(--bg-color);
+}
+
+h4.stat {
+    color: var(--accent-color);
+}
