@@ -1,3 +1,9 @@
+@import 'css/layout.css';
+@import 'css/typography.css';
+@import 'css/color.css';
+@import 'css/responsive.css';
+
+
 * {
     box-sizing: border-box
 }

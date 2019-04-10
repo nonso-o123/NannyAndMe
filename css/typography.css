@@ -1,0 +1,68 @@
+:root {
+    --display-font: 'Chelsea Market', cursive;
+    --header-font: 'Gaegu', cursive;
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: 300;
+}
+
+h1.logo {
+    font-family: var(--display-font);
+    font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav li {
+    font-family: var(--display-font);
+    letter-spacing: 1px;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.subhead {
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 2em;
+}
+
+h2.subhead {
+    font-size: 1.8em;
+}
+
+h2.subtitle {
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 2em;
+}
+
+p.mission {
+    text-align: center;
+}
+
+h3.subhead {
+    font-size: 1.8em;
+    font-family: var(--header-font);
+    font-weight: 200;
+    text-align: left;
+}
+
+h4.stat {
+    font-size: 2em;
+}
