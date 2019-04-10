@@ -1,10 +1,15 @@
+* {
+    box-sizing: border-box
+}
+
 :root {
 
     --bg-color: white;
     --text-color: black;
     /* yellow */
     --accent-color: #fcde1c;
-    --accent-color-2: dimgray;
+    /* purple */
+    --accent-color-2: #502977;
 
 
     --display-font: 'Chelsea Market', cursive;
@@ -21,7 +26,7 @@ div.container {
     grid-template-rows: repeat(7, max-content);
     /*    grid-column-gap: 20px;*/
     grid-row-gap: 10px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -31,6 +36,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0 auto;
+    width: 100%;
 }
 
 div.header {
@@ -44,6 +50,10 @@ div.header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, max-content);
+}
+
+h1#profile-display-name {
+    font-size: 2em;
 }
 
 h1.logo {
@@ -60,17 +70,25 @@ h1.logo {
     letter-spacing: 10px;
 }
 
-#login {
+#submit-login,
+#submit-signup {
     grid-column: 4;
     grid-row: 1;
-    margin-left: 50%;
-    margin-top: 10%;
     width: 100px;
     height: 3em;
     background-color: var(--accent-color-2);
     color: var(--accent-color);
     border-radius: 50px;
     border-color: var(--bg-color);
+    margin-top: 10%;
+}
+
+#login {
+    margin-left: 70%;
+}
+
+#signup {
+    margin-left: 40%;
 }
 
 nav {
@@ -93,51 +111,6 @@ nav a:hover {
     color: var(--accent-color-2);
 }
 
-.dropbtn {
-    display: block;
-    transition-duration: 0.5s;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--accent-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown-content li {
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    font-size: .8em;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
 nav ul {
     padding-top: 1em;
     display: inline-block;
@@ -149,7 +122,6 @@ nav li {
     list-style-type: none;
     font-family: var(--display-font);
     letter-spacing: 1px;
-    /*    border-right: 1.5px solid black;*/
     list-style-type: none;
     padding-right: 40px;
     text-align: center;
@@ -213,7 +185,6 @@ div.stats-block {
     background-color: var(--accent-color-2);
     color: var(--bg-color);
     padding: 10px 10px 10px 10px;
-    width: 99%;
 }
 
 h3.subhead {
@@ -260,6 +231,25 @@ div.stats-block p {
     margin-top: 0;
 }
 
+#user-info {
+    display: none;
+    grid-area: login;
+}
+
+.logged-in #user-info {
+    display: block;
+}
+
+.logged-in #signup,
+.logged-in #login {
+    display: none;
+}
+
+@media (max-width: 1111px) {
+    h1.logo {
+        font-size: 3em;
+    }
+}
 
 /*responsive*/
 
@@ -271,12 +261,13 @@ div.stats-block p {
     }
 
     h1.logo {
+        grid-column: 1 / span 3;
         font-size: 2.3em;
         height: 50px;
     }
-    
+
     button {
-        margin-right: 25px; 
+        margin-right: 25px;
     }
 
     nav ul {
@@ -302,6 +293,7 @@ div.stats-block p {
     h4.stat {
         font-size: 1.5em;
     }
+
     div.stats-block p {
         padding-right: 20px;
     }
@@ -310,7 +302,7 @@ div.stats-block p {
 
 /*mobile*/
 @media (max-width: 450px) {
-    
+
     div.container {
         width: 100%;
     }
@@ -324,7 +316,8 @@ div.stats-block p {
         text-align: left;
     }
 
-    button#login {
+    #login,
+    #signup {
         margin: 0;
         margin-top: 10%;
         height: 2em;
