@@ -7,6 +7,29 @@ div.container {
     width: 95%;
     margin: 0 auto;
 }
+div.container-profile{ 
+   grid-column: 3 / span 2;
+   grid-row: 1 / span 2;  
+   margin: 0 auto;
+   width: 60%;
+   padding: 1em;
+  
+}
+div.container-profile1{ 
+   padding-left: 5em;
+   column-gap: 5px;
+  
+ }
+ div#profile-image {
+     margin-bottom: 50px;
+ }
+ div#profile-desc {
+    grid-column: 1 / span 2;
+ }
+ div#profile-image p {
+     margin-top: 90%;   
+ }
+ 
 
 body {
     margin: 0 auto;
@@ -121,7 +144,7 @@ h3.subhead {
     margin-bottom: 0;
 }
 
-div#.block1 {
+div.block1 {
     grid-column: 1;
     grid-row: 2;
     width: 50%;
@@ -145,7 +168,10 @@ div.block4 {
 h4.stat {
     margin: 0px;
 }
-
+div.side-banner {
+    grid-column: 3;
+    grid-row: 2;
+}
 div.stats-block p {
     margin-top: 0;
 }

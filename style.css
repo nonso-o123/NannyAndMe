@@ -76,8 +76,8 @@ h1.logo {
     letter-spacing: 10px;
 }
 
-#submit-login,
-#submit-signup {
+
+.button {
     grid-column: 4;
     grid-row: 1;
     width: 100px;
@@ -88,7 +88,9 @@ h1.logo {
     border-color: var(--bg-color);
     margin-top: 10%;
 }
-
+.button1 {
+   display: block;
+}
 #login {
     margin-left: 70%;
 }
@@ -206,7 +208,7 @@ h3.subhead {
     margin-bottom: 0;
 }
 
-div#.block1 {
+div.block1 {
     grid-column: 1;
     grid-row: 2;
     width: 50%;
@@ -236,7 +238,9 @@ h4.stat {
 div.stats-block p {
     margin-top: 0;
 }
-
+div#profile-detail {
+    padding: 2em 0;
+}
 #user-info {
     display: none;
     grid-area: login;
@@ -375,3 +379,4 @@ div.stats-block p {
         font-size: .6em;
         padding-right: 5px;
     }
+}

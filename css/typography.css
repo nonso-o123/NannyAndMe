@@ -35,7 +35,6 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-
 .subhead {
     text-align: center;
     font-family: var(--header-font);
@@ -52,7 +51,7 @@ h2.subtitle {
     font-size: 2em;
 }
 
-p.mission {
+p.mission, .profile-text {
     text-align: center;
 }
 
