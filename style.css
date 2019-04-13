@@ -90,6 +90,7 @@ h1.logo {
 }
 .button1 {
    display: block;
+   width: 100%;
 }
 #login {
     margin-left: 70%;
