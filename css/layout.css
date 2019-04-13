@@ -20,6 +20,9 @@ div.container-profile1{
    column-gap: 5px;
   
  }
+ div#profile-detail {
+     margin-left: 2em;
+ }
  div#profile-image {
      margin-bottom: 50px;
  }
