@@ -11,7 +11,7 @@ body {
 
 h1.logo {
     font-family: var(--display-font);
-    font-size: 4em;
+    font-size: 6em;
     font-weight: 300;
     text-align: center;
     letter-spacing: 10px;
@@ -35,17 +35,30 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+<<<<<<< HEAD
+=======
+
+button {
+    font-family: var(--display-font);
+    letter-spacing: .5px;
+}
+
+>>>>>>> 7be7a51c6b8a92865c637bc994dc75dde1b89672
 .subhead {
     text-align: center;
     font-family: var(--header-font);
     font-size: 2em;
 }
 
+#profile-detail ul {
+    list-style-type: none;
+}
+
 h2.subhead {
     font-size: 1.8em;
 }
 
-h2.subtitle {
+.subtitle {
     text-align: center;
     font-family: var(--header-font);
     font-size: 2em;

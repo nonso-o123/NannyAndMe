@@ -32,6 +32,17 @@ div.container-profile1{
  }
  
 
+button {
+    width: 100px;
+    height: 3em;
+    border-radius: 50px;
+}
+
+.button1 {
+    display: block;
+    width: 100%;
+}
+
 body {
     margin: 0 auto;
 }
@@ -59,13 +70,18 @@ h1.logo {
     margin-top: 15px;
 }
 
-#login {
+.buttons {
     grid-column: 4;
     grid-row: 1;
-    margin-left: 50%;
-    margin-top: 10%;
-    width: 100px;
+    margin: 20% 0 0 15%;
     height: 3em;
+}
+
+.buttons button {
+    display: inline-block;
+    margin-right: 10px;
+    float: left;
+    width: 75px;
 }
 
 nav {
@@ -132,8 +148,8 @@ div.stats-block {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, max-content);
     grid-row-gap: 20px;
-    padding: 10px 10px 10px 10px;
-    width: 99%;
+    grid-column-gap: 30px;
+    padding: 10px 30px 10px 30px;
 }
 
 h3.subhead {
