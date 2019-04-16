@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+    <title>Nanny & Me</title>
+
+    <!--    Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD03P4iOijpHbL-30VWo_r2Q_pnWZrgMsI",
+            authDomain: "nanny-and-me.firebaseapp.com",
+            databaseURL: "https://nanny-and-me.firebaseio.com",
+            projectId: "nanny-and-me",
+            storageBucket: "nanny-and-me.appspot.com",
+            messagingSenderId: "807990200836"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Nanny & Me</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id''><a href="#">Donate</a></li>
+                    <li><a id="profile-link" href="user.html">Profile</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- login -->
+        <div id="login">
+            <input type="text" id="login-username" placeholder="Username/Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="submit-login">Login</button>
+        </div>
+
+        <!-- sign up -->
+        <div id="signup">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button id="submit-signup">Sign Up</button>
+        </div>
+
+        <div id="user-info">
+            <div id="display-name"></div>
+            <button id="logout">Log Out</button>
+        </div>
+
+        <script src="js/auth.js"></script>
+    </div>
+</body>
+
+</html>

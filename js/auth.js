@@ -14,6 +14,7 @@ function updateUser(credential) {
     credential.user.updateProfile(userInfo);
     authState(credential.user);
 
+
     // add user to database
     const db = firebase.database();
     const ref = db.ref('users').child(credential.user.uid);

@@ -4,7 +4,8 @@
     --text-color: black;
     /* yellow */
     --accent-color: #fcde1c;
-    --accent-color-2: dimgray;
+    /* purple */
+    --accent-color-2: #502977;
 }
 
 body {
@@ -13,7 +14,13 @@ body {
 }
 
 div.header {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-2);
+}
+
+button {
+    background-color: var(--accent-color-2);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 #login {
@@ -23,15 +30,20 @@ div.header {
     border-color: var(--bg-color);
 }
 
-nav a {
-    color: var(--text-color);
+h1.logo {
+    margin-bottom: 20px;
+}
+
+nav a,
+h1.logo {
+    color: var(--accent-color);
 }
 
 nav a:hover {
-    color: var(--accent-color-2);
+    color: var(--bg-color);
 }
 
-h2.subtitle {
+.subtitle {
     border-bottom: 1.5px solid var(--text-color);
 }
 
