@@ -5,6 +5,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet" />
+    <link href="./css/user.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
     <title>Nanny & Me</title>
 
@@ -23,6 +24,7 @@
             messagingSenderId: "807990200836"
         };
         firebase.initializeApp(config);
+
     </script>
 </head>
 
@@ -32,24 +34,9 @@
             <h1 class="logo">Nanny & Me</h1>
 
             <!-- user info -->
-            <div id="user-info">
+            <div class="buttons" id="user-info">
                 <div id="display-name"></div>
-                <button id="logout">Log Out</button>
-            </div>
-
-            <!-- login -->
-            <div id="login">
-                <input type="text" id="login-username" placeholder="Username/Email">
-                <input type="password" id="login-password" placeholder="Password">
-                <button class="button">Login</button>
-            </div>
-
-            <!-- sign up -->
-            <div id="signup">
-                <input type="text" id="signup-username" placeholder="Username">
-                <input type="email" id="signup-email" placeholder="Email">
-                <input type="password" id="signup-password" placeholder="Password">
-                <button class="button">Sign Up</button>
+                <button class="button" id="logout" style="margin-left: 30%;">Log Out</button>
             </div>
 
             <nav>
@@ -57,8 +44,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li id''><a href="#">Donate</a></li>
-                    <li><a id="profile-link" href="#">Profile</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a id="profile-link" href="user.html">Profile</a></li>
                 </ul>
             </nav>
 
@@ -67,52 +54,122 @@
         <h1 id="profile-display-name"></h1>
 
     </div>
-    <!--profile page-->
-    <div class="container container-profile1">
 
-        <!--profile pcture and details; temporary size specs for image-->
+    <!--profile page-->
+    <div class="container-profile1">
+
+        <!--profile picture and details; temporary size specs for image-->
         <div id="profile-image" style="height: 200px; width: 200px; background-color: grey; border-radius: 50%;">
 
             <img src="" alt="">
         </div>
 
         <div id="profile-detail">
-                <h2 class="subtitle">Lorem Ipsum</h2>
+            <h2 class="subtitle">Name of User</h2>
+            <ul>
+                <li><span class="user-type">Parent/Nanny</span> in <span class="location">Borough, New York, Zip Code</span></li>
+                <li>Looking for <span class="frequency">part-time/full-time</span> <span class="opposite-user"> job/nanny </span></li>
+                <li>Age</li>
+                <li>Last Signed In: <span class="last-signin">MM/DD/YY</span></li>
+                <li><span class="user-rating">#.# ★ (Average Rating)</span></li>
+            </ul>
+        </div>
+
+
+        <!--profile description / bio-->
+        <div id="profile-desc">
+            <h3 class="tagline">"User's Tag Line"</h3>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore "</p>
         </div>
 
-
-        <!--profile description-->
-        <div id="profile-desc">
-                <h3>Lorem Bio</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore
-                et dolore "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore
-                et dolore </p>
-        </div>
-
         <!--update profile-->
         <div class="container-profile">
-            <button class="button button1">Edit Profile</button>
-            <button class="button button1">Edit Calendar</button>
+            <button class="button button1">Edit Profile / Contact User</button>
+            <button class="button button1">Edit Calendar / View Availability</button>
 
+            <h2 class="subtitle">Skills & Certifications / Requirements</h2>
             <ul>
                 <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
                 <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
                 <li>Lorem Ipsum, consectetur adipiscing </li>
                 <li>Lorem Ipsum, consectetur adipiscing </li>
             </ul>
-            </p>
+        </div>
+
+        <!-- posting a review -->
+        <h2 class="subtitle" id="write-review-title">Write a Review</h2>
+        <div id="writing-review">
+            <textarea id="write-review" placeholder="How was your experience with this Nanny?"></textarea>
+            <button class="button" id="submit-review">Post Review</button>
+        </div>
+
+
+        <form class="rating">
+            <label>
+                <input type="radio" name="stars" value="1" />
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="2" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="3" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="4" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="5" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+        </form>
+
+        <h2 class="subtitle" id="reviews-title">Reviews</h2>
+
+        <!-- reviews appear here -->
+        <div id="reviews">
+            <!-- sample review 1-->
+            <div class="review">
+                <div id="review-profile-image" style="height: 50px; width: 50px; background-color: grey; border-radius: 50%;">
+
+                    <img src="" alt="">
+                </div>
+                <span class="author">Reviewer Name</span>
+                <br><span class="review-rating">Rating: ★★★★★</span>
+                <div class="review-text">This is a review. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <span class="date">Month, Day, Year</span>
+            </div>
+            <!-- sample review 2-->
+            <div class="review">
+                <div id="review-profile-image" style="height: 50px; width: 50px; background-color: grey; border-radius: 50%;">
+                    <img src="" alt="">
+                </div>
+                <span class="author">Reviewer Name</span>
+                <br><span class="review-rating">Rating: ★★★★★</span>
+                <div class="review-text">This is a review. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <span class="date">Month, Day, Year</span>
+            </div>
         </div>
     </div>
 
-
-    <script src="js/auth.js"></script>'
+    <script src="js/auth.js"></script>
     <script src="js/profile.js"></script>
-
+    <script src="js/review.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 
 </html>
