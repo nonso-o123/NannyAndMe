@@ -1,0 +1,89 @@
+#banner {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    width: 100%;
+    /*    margin-top: 2%;*/
+}
+
+#contact-us {
+    /* set up inner grid */
+    grid-column: 1/ span 3;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    grid-row-gap: 20px;
+    background-color: var(--accent-color);
+    color: var(--accent-color-2);
+    width: 98%;
+    padding: 20px;
+}
+
+h2.Us,
+h3.subhead,
+form,
+#SEND {
+    grid-column: 1 / span 4;
+    text-align: center;
+}
+
+h2.Us {
+    grid-row: 1;
+    font-family: var(--display-font);
+    margin: 0;
+}
+
+h3.subhead {
+    grid-row: 2;
+}
+
+form {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    grid-row-gap: 20px;
+    padding: 20px;
+}
+
+.name {
+    grid-row: 1;
+}
+
+.email {
+    grid-row: 2;
+}
+
+.subject {
+    grid-row: 3;
+}
+
+.message {
+    grid-row: 4;
+    height: 100px;
+}
+
+label {
+    grid-column: 1;
+
+}
+
+input {
+    grid-column: 2 / span 3;
+    margin-right: 50px;
+}
+
+div#SEND {
+    grid-row: 4;
+}
+
+.links {
+    grid-column: 4;
+    grid-row: 3;
+    background-color: var(--accent-color);
+    color: var(--accent-color-2);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
