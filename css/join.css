@@ -1,0 +1,97 @@
+img {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    width: 100%;
+    /*    margin-top: 10%;*/
+}
+
+#login,
+#signup {
+    /* set up inner grid */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    background-color: var(--accent-color);
+    border-radius: 0;
+    padding: 20px;
+}
+
+input,
+#submit-login,
+#submit-signup {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input {
+    font-family: var(--body-font);
+    padding: 2px;
+}
+
+#login {
+    grid-template-rows: repeat(3, max-content);
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding-top: 12%;
+}
+
+#login-username {
+    grid-row: 1;
+}
+
+#login-password {
+    grid-row: 2;
+}
+
+#submit-login {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    margin-top: auto;
+}
+
+#signup {
+    grid-template-rows: repeat(5, max-content);
+    grid-column: 3 / span 2;
+    grid-row: 3;
+}
+
+#signup-username {
+    grid-row: 1;
+}
+
+signup-email {
+    grid-row: 2;
+}
+
+#signup-password {
+    grid-row: 3;
+}
+
+#bubbles {
+    grid-row: 4;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parent-bubble,
+#nanny-bubble {
+    width: 20px;
+    display: inline;
+}
+
+#nanny-bubble {
+    margin-left: 20px;
+}
+
+#submit-signup {
+    grid-column: 1;
+    grid-row: 5;
+    text-align: center;
+}
+
+#user-info {
+    grid-column: 4;
+    grid-row: 1;
+    margin: 0 auto;
+    margin-top: 20%;
+}
