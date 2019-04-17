@@ -25,6 +25,16 @@ function createReview(review) {
     const date = el('span', 'date');
     date.textContent = review.date.split(' ').slice(0, 4).join(' ');
 
+    const photo = el('div', 'photo');
+    const img = new Image();
+    photo.appendChild(img);
+    reviewDiv.appendChild(photo);
+
+    const userRef = firebase.database().ref('users').child(review.uid);
+    userRef.once('value', function (snapshot) {
+        img.src = snapshot.val().photo;
+    });
+
     reviewInfo.innerHTML += "by ";
     reviewInfo.appendChild(author);
     reviewInfo.innerHTML += "on ";
