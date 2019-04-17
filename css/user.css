@@ -1,4 +1,5 @@
 @import '../style.css';
+@import'./review.css';
 
 div.container-profile1 {
     display: grid;
@@ -12,8 +13,18 @@ div.container-profile1 {
 
 }
 
-div#profile-image {
+div#profile-photo {
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+    border-radius: 50%;
     margin-bottom: 50px;
+}
+
+#photo-input {
+    background-color: var(--accent-color-2);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 div#profile-detail {
@@ -151,4 +162,7 @@ div#profile-image p {
 
 .review {
     margin-bottom: 50px;
+    background-color: var(--accent-color);
+    color: var(--accent-color-2);
+    padding: 20px;
 }

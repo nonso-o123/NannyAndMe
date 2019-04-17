@@ -13,6 +13,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -43,7 +44,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="#">Donate</a></li>
                     <li><a id="profile-link" href="user.html">Profile</a></li>
                 </ul>
@@ -59,9 +60,13 @@
     <div class="container-profile1">
 
         <!--profile picture and details; temporary size specs for image-->
-        <div id="profile-image" style="height: 200px; width: 200px; background-color: grey; border-radius: 50%;">
+        <div id="profile-photo">
+            <img id="profile-img" src="" alt="">
+        </div>
 
-            <img src="" alt="">
+        <div id="add-photo">
+            <input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif">
+            <button id="submit-photo">Upload Photo</button>
         </div>
 
         <div id="profile-detail">
@@ -84,8 +89,8 @@
         </div>
 
         <!--update profile-->
-        <div class="container-profile">
-            <button class="button button1">Edit Profile / Contact User</button>
+        <div class="container-profile" id="edit-profile">
+            <button class="button button1" id="edit">Edit Profile / Contact User</button>
             <button class="button button1">Edit Calendar / View Availability</button>
 
             <h2 class="subtitle">Skills & Certifications / Requirements</h2>
@@ -105,7 +110,11 @@
         </div>
 
 
-        <form class="rating">
+        <form class="rating" id="rating">
+            <label>
+                <input type="radio" name="stars" value="0" />
+
+            </label>
             <label>
                 <input type="radio" name="stars" value="1" />
                 <span class="icon">★</span>
@@ -155,7 +164,7 @@
             </div>
             <!-- sample review 2-->
             <div class="review">
-                <div id="review-profile-image" style="height: 50px; width: 50px; background-color: grey; border-radius: 50%;">
+                <div id="review-profile-image">
                     <img src="" alt="">
                 </div>
                 <span class="author">Reviewer Name</span>
