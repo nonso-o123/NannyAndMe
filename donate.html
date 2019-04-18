@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./css/user.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+    <title>Nanny & Me</title>
+
+    <!--    Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD03P4iOijpHbL-30VWo_r2Q_pnWZrgMsI",
+            authDomain: "nanny-and-me.firebaseapp.com",
+            databaseURL: "https://nanny-and-me.firebaseio.com",
+            projectId: "nanny-and-me",
+            storageBucket: "nanny-and-me.appspot.com",
+            messagingSenderId: "807990200836"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo">Nanny & Me</h1>
+
+        <!-- user info -->
+        <div class="buttons" id="user-info">
+            <div id="display-name"></div>
+            <button class="button" id="logout" style="margin-left: 30%;">Log Out</button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Search</a></li>
+                <li><a id="profile-link" href="user.html">Profile</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!--donate main page-->
+    <div class="container donate">
+        <!--background image-->
+        <div id="donate-bg-image"><img src="images/art.jpg" alt=""></div>
+        <!--introduction text-->
+        <div id="donate-intro-text">
+            <h2 class="subtitle">Your Gift to Support this Vision</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        </div>
+        <div id="donate-amount-list">
+            <!--Amount selection-->
+            <ul id="amount-list">
+                <li><button>$10</button></li>
+            <li><button>$25</button></li>
+            <li><button>$50</button></li>
+            <li><button>$100</button></li>
+            <li>Other Amount
+               <input type="text" value="$">
+            </li>
+
+            </ul>
+        </div>
+        <!--donation personal and payment details-->
+        <div id="donate-profile-detail">
+            <form action="post">
+          <fieldset id="donate-personal-detail">
+              <legend>Personal Detail</legend>
+              First Name: <input type="text" name="first-name" placeholder="Enter first name"><br>
+              Last Name: <input type="text" name="last-name" placeholder="Enter last name"><br>
+              Email: <input type="email" name="email" placeholder="Enter email"><br>
+              Phone Number: <input type="number" name="phone-number" placeholder="Enter phone number">         
+          </fieldset>
+            <fieldset id="donate-payment-detail">
+                <legend>Payment Detail</legend>
+                Card Number: <input type="number" name="card-number"><br>
+                Month: <input type="number" name="month"><br>
+                Year: <input type="number" name="year"><br>
+                CVV: <input type="number" name="cvv">
+            </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    
+
+
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+
+</html>

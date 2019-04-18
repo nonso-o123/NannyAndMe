@@ -6,7 +6,7 @@
 * {
     box-sizing: border-box
 }
-<<<<<<< HEAD
+
 
 :root {
 
@@ -160,7 +160,42 @@ img.mother {
     margin-right: auto;
     /*    zoom: 20%;*/
 }
-
+#donate-bg-image img {
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+div.donate{
+    grid-column: 2 / span 2;
+}
+div#donate-bg-image{
+    grid-column: 2 / span 2;
+    
+}
+div#donate-intro-text{
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+div#donate-amount-list{
+    grid-row: 3;
+    grid-column: 2 / span 3;
+}
+ul#amount-list{
+    list-style: none;
+}
+ul#amount-list li{
+    display: inline;
+}
+div#donate-profile-detail{
+    grid-row: 4;
+    grid-column: 2 / span 2; 
+}
+fieldset#donate-personal-detail{
+    grid-column: 1 span 2;
+}
+fieldset#donate-payment-detail{
+    grid-column: 3 span 2;
+}
 h2.subtitle {
     grid-column: 1 / span 4;
     grid-row: 4;
@@ -381,5 +416,3 @@ div#profile-detail {
         padding-right: 5px;
     }
 }
-=======
->>>>>>> 7be7a51c6b8a92865c637bc994dc75dde1b89672
