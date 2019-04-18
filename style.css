@@ -196,6 +196,9 @@ fieldset#donate-personal-detail{
 fieldset#donate-payment-detail{
     grid-column: 3 span 2;
 }
+button#amt-submit-btn{
+    display: block;
+}
 h2.subtitle {
     grid-column: 1 / span 4;
     grid-row: 4;
