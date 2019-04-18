@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet" />
+    <link href="css/join.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+    <title>Nanny & Me</title>
+
+    <!--    Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD03P4iOijpHbL-30VWo_r2Q_pnWZrgMsI",
+            authDomain: "nanny-and-me.firebaseapp.com",
+            databaseURL: "https://nanny-and-me.firebaseio.com",
+            projectId: "nanny-and-me",
+            storageBucket: "nanny-and-me.appspot.com",
+            messagingSenderId: "807990200836"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Nanny & Me</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Search</a></li>
+                    <li><a id="profile-link" href="user.html">Profile</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Donate</a></li>
+                </ul>
+            </nav>
+
+            <div id="user-info">
+                <div id="display-name"></div>
+                <button id="logout">Log Out</button>
+            </div>
+
+        </div>
+
+        <img src="images/reading.jpg" />
+
+        <!-- sign up -->
+        <div id="signup">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <div id="bubbles">
+                <p>I am a:</p>
+                <label for="parent-bubble"><input id="parent-bubble" type="radio" name="parent-bubble"> Parent </label>
+                <label for="nanny-bubble"><input id="nanny-bubble" type="radio" name="nanny-bubble"> Nanny</label>
+            </div>
+            <button id="submit-signup">Sign Up</button>
+            <p>Already have an account? Go ahead and <a href="login.html"><button>Log In</button></a></p>
+        </div>
+
+        <script src="js/auth.js"></script>
+        <script src="js/signup.js"></script>
+    </div>
+</body>
+
+</html>
