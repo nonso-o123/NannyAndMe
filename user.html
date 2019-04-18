@@ -30,71 +30,76 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="logo">Nanny & Me</h1>
+    <div class="header">
+        <h1 class="logo">Nanny & Me</h1>
 
-            <!-- user info -->
-            <div class="buttons" id="user-info">
-                <div id="display-name"></div>
-                <button class="button" id="logout" style="margin-left: 30%;">Log Out</button>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Donate</a></li>
-                    <li><a id="profile-link" href="user.html">Profile</a></li>
-                </ul>
-            </nav>
-
+        <!-- user info -->
+        <div class="buttons" id="user-info">
+            <div id="display-name"></div>
+            <button class="button" id="logout" style="margin-left: 30%;">Log Out</button>
         </div>
 
-        <h1 id="profile-display-name"></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Search</a></li>
+                <li><a id="profile-link" href="user.html">Profile</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </nav>
 
     </div>
 
+    <h1 id="profile-display-name"></h1>
+
     <!--profile page-->
-    <div class="container-profile1">
+    <div class="profile-page-container">
 
-        <!--profile picture and details; temporary size specs for image-->
-        <div id="profile-photo">
-            <img id="profile-img" src="" alt="">
+        <div id="profile-card">
+            <!--profile picture and details; temporary size specs for image-->
+            <div id="profile-photo">
+                <img id="profile-img" src="" alt="">
+            </div>
+
+            <!-- edit profile picture -->
+            <!--
+<div id="add-photo">
+    <input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif">
+    <button id="submit-photo">Upload Photo</button>
+</div>
+-->
+
+            <div id="profile-detail">
+                <h2 class="subtitle">Name of User</h2>
+                <ul>
+                    <li><span class="user-type">Parent/Nanny</span> in <span class="location">Borough, New York, Zip Code</span></li>
+                    <li>Looking for <span class="frequency">part-time/full-time</span> <span class="opposite-user"> job/nanny </span></li>
+                    <li>Age</li>
+                    <li>Last Signed In: <span class="last-signin">MM/DD/YY</span></li>
+                    <li><span class="user-rating">#.# ★ (Average Rating)</span></li>
+                </ul>
+            </div>
         </div>
-
-        <div id="add-photo">
-            <input type="file" id="photo-input" accept="image/jpeg, image/png, image/gif">
-            <button id="submit-photo">Upload Photo</button>
-        </div>
-
-        <div id="profile-detail">
-            <h2 class="subtitle">Name of User</h2>
-            <ul>
-                <li><span class="user-type">Parent/Nanny</span> in <span class="location">Borough, New York, Zip Code</span></li>
-                <li>Looking for <span class="frequency">part-time/full-time</span> <span class="opposite-user"> job/nanny </span></li>
-                <li>Age</li>
-                <li>Last Signed In: <span class="last-signin">MM/DD/YY</span></li>
-                <li><span class="user-rating">#.# ★ (Average Rating)</span></li>
-            </ul>
-        </div>
-
 
         <!--profile description / bio-->
         <div id="profile-desc">
             <h3 class="tagline">"User's Tag Line"</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore "</p>
+            <p>This is a bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Quam nulla porttitor massa id neque aliquam vestibulum. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Vitae aliquet nec ullamcorper sit amet. Posuere ac ut consequat semper viverra nam. Netus et malesuada fames ac turpis egestas integer eget. Neque laoreet suspendisse interdum consectetur libero.</p>
         </div>
 
         <!--update profile-->
-        <div class="container-profile" id="edit-profile">
+        <div class="skills-sidebar" id="edit-profile">
             <button class="button button1" id="edit">Edit Profile / Contact User</button>
-            <button class="button button1">Edit Calendar / View Availability</button>
+            <button class="button button1" id="calendar">Edit Calendar / View Availability</button>
 
             <h2 class="subtitle">Skills & Certifications / Requirements</h2>
             <ul>
+                <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
+                <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
+                <li>Lorem Ipsum, consectetur adipiscing </li>
+                <li>Lorem Ipsum, consectetur adipiscing </li>
                 <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
                 <li>Lorem Ipsum Lorem ipsum dolor sit amet</li>
                 <li>Lorem Ipsum, consectetur adipiscing </li>

@@ -20,13 +20,19 @@ function createReview(review) {
     const reviewInfo = el('div', 'review-info');
 
     const author = el('span', 'author');
-    author.textContent = review.displayName;
+    const link = el('a');
+    author.appendChild(link);
+    link.textContent = review.displayName;
+    link.href = 'user.html?uid=' + post.uid;
 
     const date = el('span', 'date');
     date.textContent = review.date.split(' ').slice(0, 4).join(' ');
 
     const photo = el('div', 'photo');
     const img = new Image();
+    img.onlcik = function () {
+        location.href = 'user.html?uid=' + post.uid
+    }
     photo.appendChild(img);
     reviewDiv.appendChild(photo);
 
