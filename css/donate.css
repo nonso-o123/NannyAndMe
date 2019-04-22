@@ -1,0 +1,82 @@
+#donate-bg-image img {
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+div.donate{
+    grid-column: 2 / span 2;
+}
+div#donate-bg-image{
+    grid-column: 2 / span 2;
+    
+}
+div#donate-intro-text{
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+div#donate-amount-list{
+    grid-row: 3;
+    grid-column: 2 / span 3;
+}
+ul#amount-list{
+    list-style: none;
+}
+ul#amount-list li{
+    display: inline;
+}
+div#donate-profile-detail{
+    grid-row: 4;
+    grid-column: 2 / span 2; 
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+fieldset {
+    border-style: none;
+    margin: 10px 0;
+}
+fieldset#donate-personal-detail{
+    grid-column: 1 span 2;
+    
+}
+fieldset#donate-payment-detail{
+    grid-column: 3 span 2;
+
+}
+button#amt-submit-btn{
+    display: block;
+    margin: 10px;
+}
+.input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 5px;
+    resize: vertical;
+  }
+  .label {
+    padding: 5px 5px 5px 0;
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+  }
+  .submit-section{
+      margin: auto 20%;
+      width: 100%;
+  }
+ 
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

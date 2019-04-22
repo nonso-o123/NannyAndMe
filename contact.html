@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet" />
+    <link href="css/contact.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Gaegu|Poppins" rel="stylesheet">
+    <title>Nanny & Me</title>
+
+    <!--    Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD03P4iOijpHbL-30VWo_r2Q_pnWZrgMsI",
+            authDomain: "nanny-and-me.firebaseapp.com",
+            databaseURL: "https://nanny-and-me.firebaseio.com",
+            projectId: "nanny-and-me",
+            storageBucket: "nanny-and-me.appspot.com",
+            messagingSenderId: "807990200836"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h1 class="logo">Nanny & Me</h1>
+            <div class="buttons">
+                <!-- user info -->
+                <div id="user-info">
+                    <div id="display-name"></div>
+                    <button id="logout">Log Out</button>
+                </div>
+
+                <!-- login -->
+                <a href="login.html"><button class="login">Login</button></a>
+
+                <!-- sign up -->
+                <a href="signup.html"><button class="signup">Sign Up</button></a>
+            </div>
+
+            <!-- navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Search</a></li>
+                    <li><a id="profile-link" href="user.html">Profile</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <img src="images/bubble-banner.jpg" id="banner" />
+
+        <!---Contact Us-->
+        <div id="contact-us">
+            <h2 class="Us" id="2">Contact Us</h2>
+
+            <h3 class="subhead" id="3">Have any questions or concerns? We’d love to hear from you. Here’s how to get in touch with us.</h3>
+
+            <!--Contact form-->
+
+            <form name="message" method="post">
+                <label for="name" class="name">Name</label>
+                <input class="name" type="text" value="" name="name">
+
+                <label for="email" class="email">Email</label>
+                <input class="email" type="text" value="" name="email">
+
+                <label for="subject" class="subject">Subject</label>
+                <input class="subject" type="text" value="" name="subject">
+
+                <label for="message" class="message">Message</label>
+                <input class="message" type="text" value="" name="message">
+
+            </form>
+
+            <!--Send button-->
+            <div id="SEND">
+                <button id="Send message">SEND</button>
+            </div>
+        </div>
+
+        <div class="links">
+            <p><b>Sponsorship Request:</b><br>sponsors@nannyandme.com</p>
+            <p><b>Media Request:</b><br>press@nannyandme.com</p>
+            <p><b>Partnership Request:</b><br>partners@nannyandme.com</p>
+
+            <img src="images/social-icons.png" />
+        </div>
+    </div>
+
+</body>
+
+</html>
